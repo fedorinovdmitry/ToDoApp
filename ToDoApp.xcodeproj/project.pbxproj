@@ -19,6 +19,7 @@
 		2D32535022AE8AFC00F1ADB5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32534F22AE8AFC00F1ADB5 /* Location.swift */; };
 		2D32535222AE8CF700F1ADB5 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32535122AE8CF700F1ADB5 /* LocationTests.swift */; };
 		2D32535522AE980C00F1ADB5 /* TaskManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32535422AE980C00F1ADB5 /* TaskManagerTests.swift */; };
+		2D32535822AE993500F1ADB5 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32535722AE993500F1ADB5 /* TaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2D32534F22AE8AFC00F1ADB5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2D32535122AE8CF700F1ADB5 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		2D32535422AE980C00F1ADB5 /* TaskManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerTests.swift; sourceTree = "<group>"; };
+		2D32535722AE993500F1ADB5 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		2D1FDC7E22A68F2700387F07 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D32535622AE991C00F1ADB5 /* Manager */,
 				2D89D9D922A6A624003F0DBE /* Controller */,
 				2D89D9D822A6A61F003F0DBE /* View */,
 				2D89D9D722A6A611003F0DBE /* Model */,
@@ -148,6 +151,14 @@
 			isa = PBXGroup;
 			children = (
 				2D32535422AE980C00F1ADB5 /* TaskManagerTests.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2D32535622AE991C00F1ADB5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2D32535722AE993500F1ADB5 /* TaskManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -321,6 +332,7 @@
 			files = (
 				2D1FDC8222A68F2700387F07 /* ViewController.swift in Sources */,
 				2D32534C22AE7E2400F1ADB5 /* Task.swift in Sources */,
+				2D32535822AE993500F1ADB5 /* TaskManager.swift in Sources */,
 				2D32535022AE8AFC00F1ADB5 /* Location.swift in Sources */,
 				2D1FDC8022A68F2700387F07 /* AppDelegate.swift in Sources */,
 			);
