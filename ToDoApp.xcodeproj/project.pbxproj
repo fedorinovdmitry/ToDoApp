@@ -97,12 +97,10 @@
 		2D1FDC7E22A68F2700387F07 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				2D1FDC7F22A68F2700387F07 /* AppDelegate.swift */,
-				2D1FDC8122A68F2700387F07 /* ViewController.swift */,
-				2D1FDC8322A68F2700387F07 /* Main.storyboard */,
-				2D1FDC8622A68F2700387F07 /* Assets.xcassets */,
-				2D1FDC8822A68F2700387F07 /* LaunchScreen.storyboard */,
-				2D1FDC8B22A68F2700387F07 /* Info.plist */,
+				2D89D9D922A6A624003F0DBE /* Controller */,
+				2D89D9D822A6A61F003F0DBE /* View */,
+				2D89D9D722A6A611003F0DBE /* Model */,
+				2D89D9DB22A6A698003F0DBE /* Supporting files */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -123,6 +121,40 @@
 				2D1FDCA122A68F2700387F07 /* Info.plist */,
 			);
 			path = ToDoAppUITests;
+			sourceTree = "<group>";
+		};
+		2D89D9D722A6A611003F0DBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D89D9D822A6A61F003F0DBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D89D9D922A6A624003F0DBE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D1FDC8122A68F2700387F07 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D89D9DB22A6A698003F0DBE /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				2D1FDC8622A68F2700387F07 /* Assets.xcassets */,
+				2D1FDC7F22A68F2700387F07 /* AppDelegate.swift */,
+				2D1FDC8322A68F2700387F07 /* Main.storyboard */,
+				2D1FDC8822A68F2700387F07 /* LaunchScreen.storyboard */,
+				2D1FDC8B22A68F2700387F07 /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,7 +466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FJHRWT7C3;
-				INFOPLIST_FILE = ToDoApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ToDoApp/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FJHRWT7C3;
-				INFOPLIST_FILE = ToDoApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ToDoApp/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
