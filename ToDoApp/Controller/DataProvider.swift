@@ -20,6 +20,26 @@ class DataProvider: NSObject {
 
 extension DataProvider: UITableViewDelegate, UITableViewDataSource {
     
+    //MARK: Delegate
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        
+        if let section = Section(rawValue: indexPath.section) {
+            switch section {
+            case .todo:
+                return "Done"
+            case .done:
+                return "Undone"
+            }
+            
+        }
+        
+        return nil
+    }
+    
+    
+    //MARK: DataSource
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.allCases.count
     }
