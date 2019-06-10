@@ -76,5 +76,20 @@ extension DataProvider: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let section = Section(rawValue: indexPath.section) {
+                
+                switch section {
+                case .todo:
+                    taskManager?.checkTask(at: indexPath.row)
+                case .done:
+                    taskManager?.uncheckTask(at: indexPath.row)
+                }
+                tableView.reloadData()
+            }
+            
+        }
+    }
     
 }
