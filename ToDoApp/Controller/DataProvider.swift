@@ -39,9 +39,9 @@ extension DataProvider: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskListCellID", for: indexPath)
-//        cell.textLabel?.text = String(indexPath.row)
-        return TaskCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TaskCell.self), for: indexPath) as! TaskCell
+        
+        return cell
     }
     
     
