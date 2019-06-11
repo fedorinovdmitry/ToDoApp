@@ -24,6 +24,7 @@
 		2D32535F22AEB27500F1ADB5 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32535E22AEB27500F1ADB5 /* DataProvider.swift */; };
 		2D32536122AEB97300F1ADB5 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32536022AEB97300F1ADB5 /* DataProviderTests.swift */; };
 		2D32536322AED8BB00F1ADB5 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32536222AED8BB00F1ADB5 /* TaskCell.swift */; };
+		2D32536622AF99EB00F1ADB5 /* TaskCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32536522AF99EB00F1ADB5 /* TaskCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		2D32535E22AEB27500F1ADB5 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		2D32536022AEB97300F1ADB5 /* DataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
 		2D32536222AED8BB00F1ADB5 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		2D32536522AF99EB00F1ADB5 /* TaskCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		2D1FDC9322A68F2700387F07 /* ToDoAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				2D32536422AF988800F1ADB5 /* View */,
 				2D32535922AEA88900F1ADB5 /* Controller */,
 				2D32535322AE97F200F1ADB5 /* Manager */,
 				2D1FDC9422A68F2700387F07 /* ToDoAppTests.swift */,
@@ -179,6 +182,14 @@
 				2D32536022AEB97300F1ADB5 /* DataProviderTests.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D32536422AF988800F1ADB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D32536522AF99EB00F1ADB5 /* TaskCellTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2D89D9D722A6A611003F0DBE /* Model */ = {
@@ -366,6 +377,7 @@
 			files = (
 				2D32534922AE7D1200F1ADB5 /* TaskTests.swift in Sources */,
 				2D32535222AE8CF700F1ADB5 /* LocationTests.swift in Sources */,
+				2D32536622AF99EB00F1ADB5 /* TaskCellTests.swift in Sources */,
 				2D32536122AEB97300F1ADB5 /* DataProviderTests.swift in Sources */,
 				2D32535522AE980C00F1ADB5 /* TaskManagerTests.swift in Sources */,
 				2D32535D22AEA8E600F1ADB5 /* TaskListViewControllerTests.swift in Sources */,
