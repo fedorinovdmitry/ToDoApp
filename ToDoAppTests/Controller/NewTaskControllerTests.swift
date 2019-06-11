@@ -117,6 +117,7 @@ class NewTaskControllerTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 }
+
 extension NewTaskControllerTests {
     
     class MockCLGeocoder: CLGeocoder {
