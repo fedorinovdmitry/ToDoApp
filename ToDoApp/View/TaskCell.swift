@@ -24,9 +24,7 @@ class TaskCell: UITableViewCell {
             locationLabel = nil
         } else {
             self.titleLabel.text = task.title
-            if let date = task.date {
-                setDateToLabel(date: date)
-            }
+            setDateToLabel(date: task.date)
             if let location = task.location {
                 locationLabel.text = location.name
             }
