@@ -44,5 +44,47 @@ class TaskListViewControllerTests: XCTestCase {
             sut.tableView.delegate as? DataProvider,
             sut.tableView.dataSource as? DataProvider)
     }
+    
+    func testTaskListVCHasAddBarButtonWithSelfTarget() {
+        let target = sut.navigationItem.rightBarButtonItem?.target
+        XCTAssertEqual(target as? TaskListViewController, sut)
+    }
+    
+    func takeNewTaskViewControllerFromSut() -> NewTaskController? {
+        XCTAssertNil(sut.presentedViewController)
+        guard let newTaskButton = sut.navigationItem.rightBarButtonItem,
+            let action = newTaskButton.action else {
+                XCTFail()
+                return nil
+        }
+        //<ToDoApp.NewTaskController: 0x7f849ce3f1c0> on <ToDoApp.TaskListViewController: 0x7f849ce3cc10> whose view is not in the window hierarchy!
+        UIApplication.shared.keyWindow?.rootViewController = sut
+        
+        sut.performSelector(onMainThread: action, with: newTaskButton, waitUntilDone: true)
+        
+        XCTAssertNotNil(sut.presentedViewController)
+        XCTAssertTrue(sut.presentedViewController is NewTaskController)
+        
+        return sut.presentedViewController as! NewTaskController
+    }
+    func testAddNewTaskPresentsNewTaskViewController() {
+        guard let newTaskViewController = takeNewTaskViewControllerFromSut() else {
+            XCTFail()
+            return
+        }
+        XCTAssertNotNil(newTaskViewController.titleTextField)
+    }
+    
+    func testSharesSameTaskManagerWithNewTaskVC() {
+        guard let newTaskViewController = takeNewTaskViewControllerFromSut() else {
+            XCTFail()
+            return
+        }
+        XCTAssertNotNil(sut.dataProvider.taskManager)
+        XCTAssertTrue(newTaskViewController.taskManager === sut.dataProvider.taskManager)
+        
+    }
+    
+    
 
 }

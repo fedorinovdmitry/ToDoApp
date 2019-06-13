@@ -21,6 +21,7 @@ class TaskListViewController: UIViewController {
     
     @IBOutlet var dataProvider: DataProvider!
     
+    
     // MARK: - Public Properties
     
     // MARK: - Private Properties
@@ -31,10 +32,21 @@ class TaskListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let taskManager = TaskManager()
+        dataProvider.taskManager = taskManager
     }
     
     // MARK: - IBAction
+    
+    @IBAction func addNewTask(_ sender: UIBarButtonItem) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: String(describing: NewTaskController.self)) as? NewTaskController {
+            viewController.taskManager = self.dataProvider.taskManager
+            present(viewController, animated: true, completion: nil)
+
+        }
+        
+    }
+    
     
     // MARK: - Public methods
     
