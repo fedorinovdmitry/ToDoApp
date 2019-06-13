@@ -200,6 +200,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IwP-tZ-PLc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tMi-kE-WDL"/>
                     <connections>
                         <outlet property="addressTextField" destination="uPU-nG-bV0" id="yUo-O7-1P2"/>
                         <outlet property="cancelButton" destination="frZ-yw-GK2" id="vxp-C2-Qfy"/>
@@ -212,7 +213,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igu-jp-mGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="138"/>
+            <point key="canvasLocation" x="2744.9275362318845" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tLM-op-hbi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="loo-cw-ezt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QZv-eE-Tqx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3sq-HA-QpJ" kind="relationship" relationship="rootViewController" id="qU0-5m-cQP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sES-zi-lTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834.7826086956522" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

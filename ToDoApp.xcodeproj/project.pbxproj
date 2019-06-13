@@ -147,7 +147,7 @@
 				2D32536422AF988800F1ADB5 /* View */,
 				2D32535922AEA88900F1ADB5 /* Controller */,
 				2D32535322AE97F200F1ADB5 /* Manager */,
-				2D1FDC9422A68F2700387F07 /* ToDoAppTests.swift */,
+				2D8BF9F322B2E9800064A098 /* Supporting files */,
 				2D1FDC9622A68F2700387F07 /* Info.plist */,
 				2D32534A22AE7D1E00F1ADB5 /* Model */,
 			);
@@ -245,6 +245,14 @@
 				2D1FDC8322A68F2700387F07 /* Main.storyboard */,
 				2D1FDC8822A68F2700387F07 /* LaunchScreen.storyboard */,
 				2D1FDC8B22A68F2700387F07 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		2D8BF9F322B2E9800064A098 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				2D1FDC9422A68F2700387F07 /* ToDoAppTests.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
