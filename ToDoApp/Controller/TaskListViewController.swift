@@ -36,6 +36,11 @@ class TaskListViewController: UIViewController {
         dataProvider.taskManager = taskManager
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     // MARK: - IBAction
     
     @IBAction func addNewTask(_ sender: UIBarButtonItem) {
@@ -46,6 +51,7 @@ class TaskListViewController: UIViewController {
         }
         
     }
+    
     
     
     // MARK: - Public methods
