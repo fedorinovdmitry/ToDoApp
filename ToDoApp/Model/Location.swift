@@ -20,6 +20,18 @@ struct Location {
     
 }
 
+extension Location {
+    init?(dict: [String:Any]) {
+        self.name = dict["name"] as! String
+        if let latitude = dict["latitude"] as? Double,
+            let longtitude = dict["longitude"] as? Double {
+            self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
+            
+        } else {
+            self.coordinate = nil
+        }
+    }
+}
 extension Location: Equatable {
     static func == (lhs: Location,
                     rhs: Location) -> Bool {
