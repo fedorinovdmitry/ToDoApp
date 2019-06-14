@@ -34,6 +34,8 @@ class TaskListViewController: UIViewController {
         super.viewDidLoad()
         let taskManager = TaskManager()
         dataProvider.taskManager = taskManager
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showDetailsWithNotification), name: NSNotification.Name(rawValue: "DidSelectedRownotification"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +60,14 @@ class TaskListViewController: UIViewController {
     
     // MARK: - Private methods
     
+    @objc private func showDetailsWithNotification(notification: Notification) {
+        guard let userInfo = notification.userInfo,
+            let task = userInfo["task"] as? Task,
+            let detailVC = storyboard?.instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
+        detailVC.task = task
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+    }
     // MARK: - Navigation
 
     
