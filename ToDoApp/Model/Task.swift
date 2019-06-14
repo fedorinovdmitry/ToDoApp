@@ -14,6 +14,17 @@ struct Task {
     var date: Date
     let location: Location?
     
+    var dictionary: [String : Any] {
+        var dic: [String : Any] = [:]
+        dic["title"] = title
+        dic["description"] = description
+        dic["date"] = date
+        if let locatioDic = location?.dictionary {
+            dic["location"] = locatioDic
+        }
+        return dic
+    }
+    
     init(title: String,
          description: String? = nil,
          date: Date? = nil,
