@@ -23,20 +23,28 @@ class TaskManagerTests: XCTestCase {
         sut = nil
         super.tearDown()
     }
-
+    
+    func testAddTaskWhenTaskIsAlreadyAddedDoesNonIncreaseCount() {
+        sut.add(task: Task(title: "TaskTitle"))
+        sut.add(task: Task(title: "TaskTitle"))
+        
+        XCTAssertEqual(sut.tasksCount, 1)
+    }
+    
+    func testAddTaskIncrementTasksCount() {
+        let task = Task(title: "TaskTitle")
+        sut.add(task: task)
+        
+        XCTAssertEqual(sut.tasksCount, 1)
+    }
+    
+    
     func testInitTaskManagerWithZeroTasks() {
         XCTAssertEqual(sut.tasksCount, 0)
     }
     
     func testInitTaskManagerWithZeroDoneTasks() {
         XCTAssertEqual(sut.doneTasksCount, 0)
-    }
-    
-    func testAddTaskIncrementTasksCount() {
-        let task = Task(title: "Foo")
-        sut.add(task: task)
-        
-        XCTAssertEqual(sut.tasksCount, 1)
     }
     
     func testTaskAtIndexIsAddedTask() {
