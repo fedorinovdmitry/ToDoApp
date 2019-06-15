@@ -51,6 +51,21 @@ extension DataProvider: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let section = Section(rawValue: section) {
+            switch section {
+            case .todo:
+                return "Undone tasks"
+            case .done:
+                return "Done Tasks"
+            }
+            
+        } else {
+            return nil
+        }
+        
+    }
+    
     //MARK: DataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -84,7 +99,7 @@ extension DataProvider: UITableViewDelegate, UITableViewDataSource {
             case .done:
                 task = taskManager.doneTask(at: indexPath.row)
             }
-            cell.configure(withTask: task)
+            cell.configure(withTask: task, done: task.isDone)
         }
         return cell
     }

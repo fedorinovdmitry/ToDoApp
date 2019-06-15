@@ -116,7 +116,7 @@ class NewTaskControllerTests: XCTestCase {
             XCTAssertEqual(longtitude, 36.0678371)
             geocoderAnswer.fulfill()
         }
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 2, handler: nil)
     }
     
     func testSaveDismissesNewTaskViewController() {
@@ -134,7 +134,7 @@ class NewTaskControllerTests: XCTestCase {
         
         mockNewTaskViewController.save()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             XCTAssertTrue(mockNewTaskViewController.isDismissed)
         }
         
