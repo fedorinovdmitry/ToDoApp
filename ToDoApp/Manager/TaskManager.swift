@@ -11,12 +11,13 @@ import UIKit
 
 class TaskManager {
     
-    private var tasks: [Task] = []
-    private var doneTasks: [Task] = []
+    
+    // MARK: - Public Properties
     
     var tasksCount: Int {
         return tasks.count
     }
+    
     var doneTasksCount: Int {
         return doneTasks.count
     }
@@ -24,11 +25,21 @@ class TaskManager {
     var tasksURl: URL {
         let fileURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         guard let documentURL = fileURLs.first else {
-           fatalError()
+            fatalError()
         }
         
         return documentURL.appendingPathComponent("tasks.plist")
     }
+    
+    
+    // MARK: - Private Properties
+    
+    private var tasks: [Task] = []
+    private var doneTasks: [Task] = []
+    
+    
+    // MARK: - Init
+    
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(save), name: UIApplication.willResignActiveNotification, object: nil)
         if let data = try? Data(contentsOf: tasksURl) {
@@ -44,6 +55,9 @@ class TaskManager {
     deinit {
         save()
     }
+    
+    
+    // MARK: - Public methods
     
     @objc func save() {
         let tasksDictionaries = self.tasks.map { $0.dictionary }

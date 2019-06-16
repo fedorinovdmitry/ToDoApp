@@ -9,11 +9,6 @@
 import UIKit
 
 class TaskListViewController: UIViewController {
-
-    
-    // MARK: - Custom types
-    
-    // MARK: - Constants
     
     // MARK: - Outlets
     
@@ -21,12 +16,6 @@ class TaskListViewController: UIViewController {
     
     @IBOutlet var dataProvider: DataProvider!
     
-    
-    // MARK: - Public Properties
-    
-    // MARK: - Private Properties
-    
-    // MARK: - Init
     
     // MARK: - LifeStyle ViewController
     
@@ -36,12 +25,15 @@ class TaskListViewController: UIViewController {
         dataProvider.taskManager = taskManager
         
         NotificationCenter.default.addObserver(self, selector: #selector(showDetailsWithNotification), name: NSNotification.Name(rawValue: "DidSelectedRownotification"), object: nil)
+        
+        view.accessibilityIdentifier = "mainView"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+    
     
     // MARK: - IBAction
     
@@ -55,9 +47,6 @@ class TaskListViewController: UIViewController {
     }
     
     
-    
-    // MARK: - Public methods
-    
     // MARK: - Private methods
     
     @objc private func showDetailsWithNotification(notification: Notification) {
@@ -68,12 +57,6 @@ class TaskListViewController: UIViewController {
         navigationController?.pushViewController(detailVC, animated: true)
         
     }
-    // MARK: - Navigation
-
-    
-    
-    
-
 
 }
 
